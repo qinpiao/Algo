@@ -9,6 +9,8 @@ func TestLinkList(t *testing.T) {
 	s := []interface{}{1,2,3,4,5,6}
 	l := NewLinkList(s...)
 	l.String()
+	nl := l.Reverse()
+	nl.String()
 	//fmt.Println(l.length)
 	//l.Append(2)
 	//l.String()

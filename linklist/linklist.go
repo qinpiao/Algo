@@ -85,3 +85,13 @@ func (l *linkList) Get(index int) (interface{}, error) {
 	return nextNode.next.data, nil
 }
 
+func (l *linkList) Reverse() *linkList {
+	nl := NewLinkList()
+	nl.length = l.length
+	head := nl.head
+	for NextNode := l.head.next;NextNode != nil; NextNode = NextNode.next{
+		newNode := &node{data:NextNode.data, next:head.next}
+		head.next = newNode
+	}
+	return nl
+}
