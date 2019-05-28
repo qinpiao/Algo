@@ -23,6 +23,6 @@ func quickSort(s []int, start, end int) {
 			s[j], pivot = temp, j-1
 		}
 	}
-	mergeSortC(s, start, pivot-1)
-	mergeSortC(s, pivot, end)
+	quickSort(s, start, pivot-1)
+	quickSort(s, pivot, end)
 }
