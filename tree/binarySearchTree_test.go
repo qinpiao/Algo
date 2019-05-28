@@ -25,27 +25,30 @@ func TestBinarySearchTree(t *testing.T) {
 			panic(err)
 		}
 	}
-	//bst.InOrderTraverse()
-	//fmt.Println()
+	bst.InOrderTraverse()
+	fmt.Println()
 	bst.PreOrderTraverse()
 	fmt.Println()
-	//bst.PostOrderTraverse()
-	//fmt.Println()
-	//fmt.Println(bst.Min())
-	//fmt.Println(bst.Max())
+	bst.PostOrderTraverse()
+	fmt.Println()
+	fmt.Println(bst.Min())
+	fmt.Println(bst.Max())
 	bst.HierarchicalTraverse()
 	fmt.Println()
 	bst.ZTraverse()
 	fmt.Println()
-	//n := bst.Find(2)
-	//if nil != n {
-	//	fmt.Println(n.data)
-	//}
+	n := bst.Find(2)
+	if nil != n {
+		fmt.Println(n.data)
+	}
 
 	bst.Delete(2)
-	//bst.InOrderTraverse()
+	bst.InOrderTraverse()
 	fmt.Println()
 	bst.HierarchicalTraverse()
+	fmt.Println()
+	bst.Mirror()
+
 
 }
 

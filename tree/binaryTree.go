@@ -126,3 +126,22 @@ func (bt *binaryTree) ZTraverse() {
 	queue := []*node{bt.root}
 	zNext(queue, true)
 }
+
+func (bt *binaryTree) Mirror() {
+	swap(bt.root)
+}
+
+func swap(n *node) {
+	if nil == n.left && nil == n.right {
+		return
+	} else {
+		n.left, n.right = n.right, n.left
+		if nil != n.left {
+			swap(n.left)
+		}
+		if nil != n.right {
+			swap(n.right)
+		}
+	}
+
+}

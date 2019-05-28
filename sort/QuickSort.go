@@ -16,11 +16,11 @@ func quickSort(s []int, start, end int) {
 	for i := end-1; i >= start; i-- {
 		if s[i] > s[pivot] {
 			temp := s[i]
-			j := i+1
-			for ;j<= pivot; j++ {
-				s[j-1] = s[j]
+			j := i
+			for ;j< pivot; j++ {
+				s[j] = s[j+1]
 			}
-			s[j-1], pivot = temp, j-2
+			s[j], pivot = temp, j-1
 		}
 	}
 	mergeSortC(s, start, pivot-1)
